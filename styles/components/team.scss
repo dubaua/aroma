@@ -1,0 +1,28 @@
+@import 'styles/shared/_global.scss';
+
+.team {
+  margin-bottom: 40px;
+
+  &.typography {
+    padding: 0;
+  }
+
+  &__preview {
+    position: relative;
+    padding-bottom: 100%;
+  }
+
+  &__photo {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  &__photo {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+}

@@ -1,0 +1,45 @@
+@import 'styles/shared/_global.scss';
+
+.pager {
+  $pager: &;
+  $pager-size: $base * 0.75;
+  $border-width: 1.5px;
+  $border-width--active: $pager-size * 0.5;
+
+  &__link {
+    display: block;
+    margin: $pager-size 0;
+    width: $pager-size;
+    height: $pager-size;
+    box-sizing: border-box;
+    border-radius: 50%;
+    color: $color-gray-900;
+    border: $border-width solid;
+    @include transition('color, border-width');
+
+    &:hover,
+    &._hover {
+      color: $color-active;
+    }
+
+    &--active {
+      border-width: $border-width--active;
+    }
+  }
+
+  &--contrast #{$pager}__link {
+    color: $color-gray-contrast-900;
+  }
+
+  @include from('lg') {
+    &--contrast-lg #{$pager}__link {
+      color: $color-gray-contrast-900;
+    }
+  }
+
+  @include from-to('md', 'lg') {
+    &--contrast-only-md #{$pager}__link {
+      color: $color-gray-contrast-900;
+    }
+  }
+}

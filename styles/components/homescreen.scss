@@ -1,0 +1,73 @@
+@import 'styles/shared/_global.scss';
+
+.homescreen {
+  position: relative;
+  overflow: hidden;
+  &__offer {
+    padding: 5vh 2em 0;
+
+    @include from('md') {
+      padding: 20vh 0 0 calc(5em + 15vw);
+      width: 38%;
+    }
+
+    h1 {
+      margin-bottom: 0.62em;
+    }
+
+    p {
+      color: transparentize($color-text, 0.2);
+      font-size: 1em;
+      @include from('md') {
+        font-size: 1.38em;
+      }
+      margin-bottom: 1em;
+    }
+  }
+
+  &__tower {
+    position: absolute;
+    bottom: -1px;
+    line-height: 0;
+    transform-origin: bottom right;
+
+    & svg {
+      fill: $color-background--contrast;
+      stroke: $color-background--contrast;
+    }
+
+    $height: 50vh;
+    height: $height;
+    width: $height * 0.8;
+    @media (orientation: portrait) {
+      $width: 45vw;
+      width: $width;
+      height: $width * 1.25;
+    }
+
+    &--front {
+      right: 8vw;
+      @media (orientation: portrait) {
+        right: 12vw;
+      }
+    }
+
+    &--middle {
+      right: 30vw;
+      @media (orientation: portrait) {
+        right: 55vw;
+      }
+      bottom: -1vh;
+      transform: scale(0.88);
+    }
+
+    &--back {
+      right: 50vw;
+      @media (orientation: portrait) {
+        display: none;
+      }
+      bottom: -2vh;
+      transform: scale(0.76);
+    }
+  }
+}

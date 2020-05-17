@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Продажа, прокачка и перевозка топлива и нефтепродуктов</title>
+    <link href="https://fonts.googleapis.com/css?family=Rubik:400,400i,500,700&display=swap&subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="/normalize.cb811bce.css">
+    <link rel="stylesheet" href="/main.25a63fa3.css">
+  </head>
+  <body>
+    <svg id="sprite" xmlns="http://www.w3.org/2000/svg">
+      <symbol id="flag-ru" viewBox="0 0 12 6">
+        <rect fill="#fff" width="12" height="3"></rect>
+        <rect fill="#d52b1e" y="3" width="12" height="3"></rect>
+        <rect fill="#0039a6" y="2" width="12" height="2"></rect>
+      </symbol>
+      <symbol id="flag-en" viewBox="0 0 60 30">
+        <clipPath id="t">
+          <path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z"></path>
+        </clipPath>
+        <path d="M0,0 v30 h60 v-30 z" fill="#00247d"></path>
+        <path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"></path>
+        <path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#t)" stroke="#cf142b" stroke-width="4"></path>
+        <path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"></path>
+        <path d="M30,0 v30 M0,15 h60" stroke="#cf142b" stroke-width="6"></path>
+      </symbol>
+      <symbol id="stand" viewBox="0 0 409 369">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M258.295 6.259C257.49 2.88424 254.475 0.502404 251.005 0.500002C247.536 0.4976 244.517 2.87525 243.707 6.2489L177.028 283.943L159.481 257.253C158.557 255.847 156.987 255 155.303 255H109.309H108.5V242.096L119.85 244.469C121.512 244.817 123.235 245 125 245C138.807 245 150 233.807 150 220C150 206.193 138.807 195 125 195C123.211 195 121.466 195.188 119.784 195.545L101.4 199.388C96.1608 194.202 88.9544 191 81 191C70.4404 191 61.199 196.644 56.1277 205.079L10.4989 268.019C8.93746 269.918 8 272.349 8 275V301H7.49998C4.46651 301 1.73174 302.827 0.570879 305.63C-0.589979 308.432 0.0516893 311.658 2.19667 313.803L57.3934 369L88.5 369H338.421V342L258.295 6.259ZM406 369H410V9H406V369ZM30 301H58L58 265.563L30 280.929V301ZM73.5 255H58L58 263.51L30 278.875V275C30 268.925 25.0751 264 19 264C17.637 264 16.3319 264.248 15.1273 264.701L52.9838 212.483C52.3421 214.88 52 217.4 52 220C52 233.423 61.1191 244.715 73.5 248.021V255ZM93.5 255H88.5V248.826L92.504 246.629C92.8393 246.484 93.1714 246.332 93.5 246.175V255ZM25.6066 316H58L58 348.393L25.6066 316ZM214.49 342H322.999L250.978 40.2155L188.283 301.317L189.021 302.457L214.49 342ZM54 220C54 232.309 62.2372 242.695 73.5 245.945V234.137C68.4432 231.449 65 226.126 65 220C65 212.189 70.5974 205.685 78 204.281L99.0138 199.887C94.2353 195.605 87.9219 193 81 193C66.0883 193 54 205.088 54 220ZM93.5 243.938V238.961L88.5 237.915V245.945C90.2458 245.441 91.919 244.766 93.5 243.938Z"></path>
+      </symbol>
+      <symbol id="rotor" viewBox="0 0 244 244">
+        <path d="M114.527 116.5H114.516C114.523 116.824 114.527 117.149 114.527 117.474C114.527 117.483 114.527 117.491 114.527 117.5C114.527 117.509 114.527 117.517 114.527 117.526C114.509 149.089 80.2365 175.183 35.7238 179.403C33.7189 179.593 32.4046 181.626 33.2715 183.443C44.4939 206.976 76.2028 224.475 114.527 226.749V241C114.527 242.105 115.423 243 116.527 243H127.527C128.632 243 129.527 242.105 129.527 241V116C129.527 114.895 128.632 114 127.527 114L116.527 114C115.423 114 114.527 114.895 114.527 116V116.5Z"></path>
+      </symbol>
+      <symbol id="strope" viewBox="0 0 434 434">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M217 0.5C219.485 0.5 221.5 2.51472 221.5 5V217C221.5 219.485 219.485 221.5 217 221.5C214.515 221.5 212.5 219.485 212.5 217V5C212.5 2.51472 214.515 0.5 217 0.5Z"></path>
+      </symbol>
+      <symbol id="jack" viewBox="0 0 301 301">
+        <path d="M255.849 61.1534C256.135 58.6399 258.279 56.6854 260.784 57.0421C294.551 61.8519 301 124.392 301 148.748C301 177.001 294.84 202.279 285.146 219.155C283.136 222.654 278.216 221.816 277.023 217.961L253.14 140.748H151V149.248C151 154.495 146.747 158.748 141.5 158.748C136.253 158.748 132 154.495 132 149.248V140.748H19.0001V149.248C19.0001 154.495 14.7468 158.748 9.50006 158.748C4.25336 158.748 6.2948e-05 154.495 6.28854e-05 149.248L6.10352e-05 108.748L250.434 108.748L255.849 61.1534Z"></path>
+      </symbol>
+      <symbol id="wheel" viewBox="0 0 56 56">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M0.252075 24.1227L25.0957 28.5121L3.25237 41.1334L3.251 41.1342L4.251 42.8662L26.1044 30.2591L17.4839 53.9691L19.363 54.6537L28 30.9491L36.6368 54.6531L38.5164 53.9697L29.8956 30.2591L51.7484 42.8659L52.749 41.1342L30.9043 28.5121L55.7479 24.1227L55.4013 22.153L30.554 26.5255L46.7639 7.19381L45.2322 5.90771L29.0086 25.2288L29 0.000349007L27 -0.000335693L26.9914 25.2288L10.7682 5.90824L9.23569 7.19329L25.446 26.5255L0.599371 22.1531L0.252075 24.1227Z"></path>
+      </symbol>
+      <symbol id="pump" viewBox="0 0 20 96">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M11.3503 3.34665L10 0.556152L8.64978 3.34665L1.14978 18.8466L0.685303 19.8066L1.43936 20.5607L4.93936 24.0607L5.37872 24.5H6.00003H14H14.6213L15.0607 24.0607L18.5607 20.5607L19.3148 19.8066L18.8503 18.8466L11.3503 3.34665ZM6.62134 21.5L4.31476 19.1934L10 7.44385L15.6853 19.1934L13.3787 21.5H6.62134ZM15 87V96H5.00003V87H15Z"></path>
+      </symbol>
+    </svg>
+    <div class="fixed" data-immerser="">
+      <div class="fixed__left-top menu" data-immerser-solid="left-top">
+        <a href="#home" class="menu__link">Арома</a>
+        <a href="#services" class="menu__link">Услуги</a>
+        <a href="#about" class="menu__link">О компании</a>
+        <a href="#documents" class="menu__link">Документы</a>
+        <a href="#diesel" class="menu__link">Дизельное топливо</a>
+        <a href="#products" class="menu__link">Продукты переработки</a>
+        <a href="#contact" class="menu__link">Контактная информация</a>
+      </div>
+      <div class="fixed__right-top lang" data-immerser-solid="left-right">
+        <span href="#" class="lang__link">
+          <svg class="lang__image" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <use xlink:href="#flag-ru"></use>
+          </svg>
+        </span>
+        <a href="/en.html" class="lang__link">
+          <svg class="lang__image" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <use xlink:href="#flag-en"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="fixed__pager pager" data-immerser-pager="" data-immerser-solid="pager"></div>
+      <div class="fixed__left-bottom" data-immerser-solid="left-bottom">© 2020 — Арома Групп</div>
+      <div class="fixed__right-bottom" data-immerser-solid="right-bottom">
+        <a href="tel:+88005553013">+8 800 555-30-13</a> — звонок бесплатный
+      </div>
+    </div>
+    <section class="scene scene--evening-sky homescreen" data-immerser-layer="" id="home">
+      <div class="homescreen__offer">
+        <div class="typography">
+          <h1>Международная торговля нефтью и газом</h1>
+          <p>Перевезем ваше или доставим наше топливо наземным и водным транспортом, или прокачаем по трубе</p>
+          <a href="#contact" class="button">Заказать услугу</a>
+        </div>
+
+        <div class="homescreen__tower homescreen__tower--front">
+          <div class="pumpjack pumpjack--front" data-pumpjack="" data-pumpjack-start="0">
+            <div class="pumpjack__part pumpjack__part--stand" data-pumpjack-stand="">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <use xlink:href="#stand"></use>
+              </svg>
+            </div>
+            <div class="pumpjack__part pumpjack__part--rotor" data-pumpjack-rotor="">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <use xlink:href="#rotor"></use>
+              </svg>
+              <div class="pumpjack__part pumpjack__part--strope" data-pumpjack-strope="">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <use xlink:href="#strope"></use>
+                </svg>
+              </div>
+            </div>
+            <div class="pumpjack__part pumpjack__part--jack" data-pumpjack-jack="">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <use xlink:href="#jack"></use>
+              </svg>
+            </div>
+            <div class="pumpjack__part pumpjack__part--wheel" data-pumpjack-wheel="">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <use xlink:href="#wheel"></use>
+              </svg>
+            </div>
+            <div class="pumpjack__part pumpjack__part--pump" data-pumpjack-pump="">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <use xlink:href="#pump"></use>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="homescreen__tower homescreen__tower--middle">
+          <div class="pumpjack pumpjack--middle" data-pumpjack="" data-pumpjack-start="1.047">
+            <div class="pumpjack__part pumpjack__part--stand" data-pumpjack-stand="">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <use xlink:href="#stand"></use>
+              </svg>
+            </div>
+            <div class="pumpjack__part pumpjack__part--rotor" data-pumpjack-rotor="">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <use xlink:href="#rotor"></use>
+              </svg>
+              <div class="pumpjack__part pumpjack__part--strope" data-pumpjack-strope="">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <use xlink:href="#strope"></use>
+                </svg>
+              </div>
+            </div>
+            <div class="pumpjack__part pumpjack__part--jack" data-pumpjack-jack="">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <use xlink:href="#jack"></use>
+              </svg>
+            </div>
+            <div class="pumpjack__part pumpjack__part--wheel" data-pumpjack-wheel="">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <use xlink:href="#wheel"></use>
+              </svg>
+            </div>
+            <div class="pumpjack__part pumpjack__part--pump" data-pumpjack-pump="">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <use xlink:href="#pump"></use>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="homescreen__tower homescreen__tower--back">
+          <div class="pumpjack pumpjack--back" data-pumpjack="" data-pumpjack-start="2.094">
+            <div class="pumpjack__part pumpjack__part--stand" data-pumpjack-stand="">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <use xlink:href="#stand"></use>
+              </svg>
+            </div>
+            <div class="pumpjack__part pumpjack__part--rotor" data-pumpjack-rotor="">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <use xlink:href="#rotor"></use>
+              </svg>
+              <div class="pumpjack__part pumpjack__part--strope" data-pumpjack-strope="">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <use xlink:href="#strope"></use>
+                </svg>
+              </div>
+            </div>
+            <div class="pumpjack__part pumpjack__part--jack" data-pumpjack-jack="">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <use xlink:href="#jack"></use>
+              </svg>
+            </div>
+            <div class="pumpjack__part pumpjack__part--wheel" data-pumpjack-wheel="">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <use xlink:href="#wheel"></use>
+              </svg>
+            </div>
+            <div class="pumpjack__part pumpjack__part--pump" data-pumpjack-pump="">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <use xlink:href="#pump"></use>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="scene" data-immerser-layer="" id="services">
+      <div class="scene__main background--contrast">
+        <div class="row">
+          <div class="col col-xs-4 col-lg-2">
+            <div class="typography typography--contrast">
+              <h1>Услуги</h1>
+              <p>
+                Наша компания доставляет указанные товары по России, СНГ и странам дальнего зарубежья. Доставляем
+                продукцию в прямом смешанном железнодорожном сообщении, в вагонах и контейнерах.Также выполняем прокачку
+                нефтепродуктов по трубе.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col col-xs-4 col-lg-2">
+            <div class="typography typography--contrast">
+              <h2>Перевозка</h2>
+              <p>
+                Перевозки по России, СНГ и дальнему зарубежью, в вагонах и контейнерах, прямом Ж/Д и смешанном сообщении
+              </p>
+              <a href="#contact" class="button button--contrast">Заказать перевозку</a>
+            </div>
+          </div>
+          <div class="col col-xs-4 col-lg-2">
+            <div class="typography typography--contrast">
+              <h2>Прокачка</h2>
+              <p>
+                Прокачка объемов нефтепродуктов по трубе
+              </p>
+              <a href="#contact" class="button button--contrast">Заказать прокачку</a>
+            </div>
+          </div>
+          <div class="col col-xs-4 col-lg-2">
+            <div class="typography typography--contrast">
+              <h2>Хранение</h2>
+              <p>
+                Прокачка объемов нефтепродуктов по трубе
+              </p>
+              <a href="#contact" class="button button--contrast">Заказать прокачку</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="scene__aside background-image background-image--service"></div>
+    </section>
+    <section class="scene" data-immerser-layer="" id="about">
+      <div class="scene__aside">
+        <div class="typography">
+          <h1>Компания Арома</h1>
+          <p>
+            Aroma Group специализирующаяся на международной торговле нефтью, природного газа и сжиженного природного
+            газа.
+          </p>
+          <p>
+            Мы предлагаем нашим клиентам широкий спектр нефтепродуктов и можем предоставить полный спектр услуг, начиная
+            от подбора необходимой продукции с необходимыми качественными характеристиками до поставки продукции с
+            оптимальными логистическими решениями.
+          </p>
+        </div>
+      </div>
+      <div class="scene__main">
+        <div class="row">
+          <div class="col col-xs-4 col-md-2">
+            <div class="team typography">
+              <div class="team__preview">
+                <img src="/man-1.974c4cdc.jpg" class="team__photo">
+              </div>
+              <h2>Артем Романов</h2>
+              <p>Директор</p>
+            </div>
+          </div>
+          <div class="col col-xs-4 col-md-2">
+            <div class="team typography">
+              <div class="team__preview">
+                <img src="/man-3.17a0afe0.jpg" class="team__photo">
+              </div>
+              <h2>Павел Корчагин</h2>
+              <p>Коммерческий директор</p>
+            </div>
+          </div>
+          <div class="col col-xs-4 col-md-2">
+            <div class="team typography">
+              <div class="team__preview">
+                <img src="/man-2.2156ccb5.jpg" class="team__photo">
+              </div>
+              <h2>Артур Арсланов</h2>
+              <p>Менеджер</p>
+            </div>
+          </div>
+          <div class="col col-xs-4 col-md-2">
+            <div class="team typography">
+              <div class="team__preview">
+                <img src="/woman-2.95c9b23b.jpg" class="team__photo">
+              </div>
+              <h2>Анна Встречкина</h2>
+              <p>Логист</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="scene" data-immerser-layer="" id="documents">
+      <div class="scene__main background--contrast">
+        <div class="typography typography--contrast">
+          <h1>Правила оформления ICPO</h1>
+          <p>
+            Все нормальные покупатели знакомы с правилами оформления таких документов как ICPO и BCL, но чтобы
+            максимально сэкономить свое время мы решили изложить здесь некоторые правила, пренебрегая которыми у нас не
+            получится совместной работы.
+          </p>
+
+          <p>
+            Мы ВСЕГДА оперативно отвечаем тем компаниям, документы которых подготовлены надлежащим образом, откровенный
+            "мусор" мы даже и не рассматриваем.
+          </p>
+
+          <p>ICPO должно быть оформлено на русском и английском языках.</p>
+
+          <a class="button button--contrast" href="https://docs.google.com/document/d/1VPPhE4kuB2vxjUTVyNELwixJN0Y78R-mCD9c6wHNfVs/edit?usp=sharing" target="_blank">Пример оформления ICPO</a>
+        </div>
+      </div>
+      <div class="scene__aside background-image background-image--icpo"></div>
+    </section>
+    <section class="scene" data-immerser-layer="" id="diesel">
+      <div class="scene__main">
+        <div class="row">
+          <div class="col col-xs-4 col-lg-2">
+            <div class="typography">
+              <h1>Дизельное топливо</h1>
+              <p>
+                Это топливо из керосиново-газойлевых фракций прямой перегонки нефти. Потребители дизельного топлива –
+                железнодорожный транспорт, дизельные автомобили, водный транспорт, военная техника, дизельные
+                электрогенераторы, сельскохозяйственная техника.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col col-xs-4 col-lg-2">
+            <div class="typography">
+              <h2>Летнее</h2>
+              <p>
+                Используется при температуре воздуха не ниже 0°С.
+              </p>
+            </div>
+          </div>
+          <div class="col col-xs-4 col-lg-2">
+            <div class="typography">
+              <h2>Межсезонное</h2>
+              <p>
+                Используется при температуре воздуха не ниже -15°С.
+              </p>
+            </div>
+          </div>
+          <div class="col col-xs-4 col-lg-2">
+            <div class="typography">
+              <h2>Зимнее</h2>
+              <p>
+                Используется при температуре воздуха не ниже -20°С
+              </p>
+            </div>
+          </div>
+          <div class="col col-xs-4 col-lg-2">
+            <div class="typography">
+              <h2>Евро-5</h2>
+              <p>
+                Классифицирует дизельное топливо по температурно-климатическим зонам применения: класс A - F для
+                температур от +5 до -20 °С, класс от 0 - 4 для температур от -20 до -44 °С.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <aside class="scene__aside background-image background-image--diesel"></aside>
+    </section>
+    <section class="scene scene--products" data-immerser-layer="" id="products">
+      <div class="scene__main background-gray-100">
+        <div class="row">
+          <div class="col col-xs-4 col-lg-3">
+            <div class="typography">
+              <h1>Продукты нефте&shy;переработки</h1>
+              <p>
+                В процессе производства и переработки нефти вырабатываются побочные продукты. Эти продукты находят
+                применение в хозяйстве, строительстве и других отраслях.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col col-xs-4 col-lg-2 col-xl-1">
+            <div class="typography">
+              <h2>Битум</h2>
+              <p>
+                Используется для изготовления кровельных материалов, асфальтобетона. Его применяют как средство изоляции
+                при строительстве дорог, зданий и прокладке трубопроводов.
+              </p>
+            </div>
+          </div>
+          <div class="col col-xs-4 col-lg-2 col-xl-1">
+            <div class="typography">
+              <h2>Мазут</h2>
+              <p>
+                Используется как топливо для паровых котлов, котельных установок и промышленных печей.
+              </p>
+            </div>
+          </div>
+          <div class="col col-xs-4 col-lg-2 col-xl-2">
+            <div class="typography">
+              <h2>Авиационный керосин</h2>
+              <p>
+                Используется как топливо для авиационных турбореактивных, турбовентиляторных и турбовинтовых двигателей.
+                Также выполняет функцию хладагента и смазки в топливной системе.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <aside class="scene__aside"></aside>
+    </section>
+    <section class="scene scene--contact" data-immerser-layer="" id="contact">
+      <div class="scene__main">
+        <div class="row">
+          <div class="col col-xs-4 col-lg-4">
+            <div class="typography">
+              <h1>Свазаться с нами</h1>
+              <form id="contact-form" class="form">
+                <div class="form__field">
+                  <label for="name" class="form__label">Имя</label>
+                  <input class="form__input" type="text" id="name" name="name" required="">
+                </div>
+                <div class="form__field">
+                  <label for="phone" class="form__label">Телефон</label>
+                  <input class="form__input" type="text" id="phone" name="phone" required="">
+                </div>
+                <div class="form__field">
+                  <label for="email" class="form__label">Почта</label>
+                  <input class="form__input" type="text" id="email" name="email">
+                </div>
+                <div class="form__field">
+                  <label for="comment" class="form__label">Сообщение</label>
+                  <textarea class="form__input" type="text" id="comment" name="comment"></textarea>
+                </div>
+                <div class="form__field">
+                  <button class="button form__submit" type="submit">Отправить</button>
+                </div>
+                <div class="message" id="message"></div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="/main.3e12e014.js"></script>
+  </body>
+</html>

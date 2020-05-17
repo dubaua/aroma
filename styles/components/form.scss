@@ -1,0 +1,37 @@
+@import 'styles/shared/_global.scss';
+
+.form {
+  width: 100%;
+  max-width: 480px;
+
+  &__field {
+    & + & {
+      margin-top: 24px;
+    }
+  }
+  &__label {
+    display: block;
+    margin: 0 0 4px !important;
+    line-height: 1;
+    color: $color-gray-700;
+    cursor: pointer;
+  }
+
+  &__input {
+    margin: 0 !important;
+    border: 1px solid $color-gray-400;
+    padding: 0.38em 0.62em;
+    font-size: 20px;
+    width: 100%;
+    box-sizing: border-box;
+
+    &:focus {
+      border-color: $color-focus;
+      box-shadow: 0 0 0 1px $color-focus;
+    }
+  }
+
+  &__submit {
+    margin-top: 0 !important;
+  }
+}

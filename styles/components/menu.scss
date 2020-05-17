@@ -1,0 +1,21 @@
+@import 'styles/shared/_global.scss';
+
+.menu {
+  $menu: &;
+  display: flex;
+  margin: 0 $base * -1;
+
+  &__link {
+    color: $color-text;
+    display: block;
+    font-size: $base;
+    line-height: 1;
+    text-decoration: none;
+    padding: 1em $base;
+    @include transition('color');
+  }
+
+  &--contrast #{$menu}__link {
+    color: $color-text--contrast;
+  }
+}

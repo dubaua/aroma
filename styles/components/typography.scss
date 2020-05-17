@@ -1,0 +1,63 @@
+@import 'styles/shared/_global.scss';
+
+.typography {
+  padding-top: 2.5vh;
+  padding-bottom: 2.5vh;
+
+  * {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  * + * {
+    margin-top: 0.62em;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: normal;
+  }
+
+  h1 {
+    font-size: 2em;
+    @include from('md') {
+      font-size: 3em;
+    }
+  }
+
+  h2 {
+    font-size: 1.5em;
+    @include from('md') {
+      font-size: 2em;
+    }
+  }
+
+  p {
+    font-size: $base;
+    line-height: 1.38;
+    color: $color-text--muted;
+  }
+
+  .subtitle {
+    margin-bottom: -1em;
+    font-size: 0.88em;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .button {
+    margin-top: 1em;
+  }
+
+  &--contrast {
+    color: $color-text--contrast;
+    p {
+      color: $color-text--contrast-muted;
+    }
+  }
+}

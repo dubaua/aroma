@@ -1,0 +1,47 @@
+@import 'styles/shared/_global.scss';
+
+.color-text {
+  color: $color-gray-900;
+
+  a {
+    color: inherit;
+  }
+}
+
+.color-text--contrast {
+  color: $color-gray-contrast-900;
+
+  a {
+    color: inherit;
+  }
+}
+
+.background--contrast {
+  background-color: $color-gray-contrast-50;
+}
+
+.background-image {
+  min-height: 67vw;
+  @include from('lg') {
+    min-height: 0;
+  }
+  background-repeat: no-repeat;
+  background-size: cover;
+  &--gas {
+    background-image: url('../images/gas.jpg');
+    background-position: center center;
+  }
+  &--service {
+    background-image: url('../images/service.jpg');
+    background-position: left center;
+  }
+  &--icpo {
+    background-image: url('../images/icpo.jpg');
+    background-position: 62% center;
+    background-size: cover;
+  }
+  &--diesel {
+    background-image: url('../images/gas.jpg');
+    background-position: center center;
+  }
+}

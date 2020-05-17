@@ -1,0 +1,16 @@
+@import 'styles/shared/_global.scss';
+
+.lang {
+  display: flex;
+  margin-right: -$base;
+
+  &__link {
+    display: block;
+    padding: 1em $base;
+  }
+
+  &__image {
+    width: 32px;
+    height: 16px;
+  }
+}

@@ -1,0 +1,60 @@
+@import 'styles/shared/_global.scss';
+
+.fixed {
+  display: none;
+  @include from('md') {
+    position: fixed;
+    display: block;
+    top: 2em;
+    bottom: 2em;
+    left: 3em;
+    right: 3em;
+    z-index: 1;
+
+    &__pager {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translate(0, -50%);
+    }
+
+    &__right-top {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+
+    &__left-top {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    &__right-bottom {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+
+    &__left-bottom {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+  }
+}
+
+.pager,
+.logo,
+.menu,
+.language,
+.about {
+  color: black;
+}
+.pager--contrast,
+.logo--contrast,
+.menu--contrast,
+.language--contrast,
+.about--contrast {
+  color: white;
+}

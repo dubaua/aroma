@@ -1,0 +1,21 @@
+@import 'styles/shared/_global.scss';
+
+.message {
+  display: none;
+  &:not(:empty) {
+    display: block;
+    border: 1px solid;
+    padding: 0.62em 1em;
+    margin-top: 24px;
+  }
+  &--positive {
+    $positive-color: rgb(14, 161, 100);
+    color: $positive-color;
+    background-color: transparentize($positive-color, 0.9);
+  }
+  &--negative {
+    $negative-color: rgb(231, 27, 78);
+    color: $negative-color;
+    background-color: transparentize($negative-color, 0.9);
+  }
+}

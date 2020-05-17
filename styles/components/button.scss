@@ -1,0 +1,17 @@
+@import 'styles/shared/_global.scss';
+
+.button {
+  display: inline-block;
+  padding: 1em 2em;
+  color: $color-text--contrast;
+  background: $color-background--contrast;
+  border: none;
+  line-height: 1;
+  text-decoration: none;
+  @include transition('color');
+
+  &--contrast {
+    color: $color-text;
+    background: $color-background;
+  }
+}
